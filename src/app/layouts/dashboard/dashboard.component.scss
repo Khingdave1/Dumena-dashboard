@@ -1,0 +1,66 @@
+@import '../../../assets/css/variables.scss';
+
+.container-dash {
+  @media only screen and (max-width: 755px) {
+    display: flex;
+    width: 100%;
+  }
+  // Side Nav starts //
+  .sidenav-area {
+    width: 15%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    .sidenav {
+      height: 100%;
+      background-color: $white-color;
+      border: 1px solid $inner-boder;
+      position: relative;
+    }
+    @media only screen and (max-width: 755px) {
+      position: fixed;
+      top: 0px;
+      left: -100%;
+      width: 30%;
+      // background-color: #ebebeb79;
+      transition: all 0.5s;
+      z-index: 100;
+      &.show-menu {
+        left: 0;
+      }
+      .sidenav {
+        width: 100%;
+      }
+    }
+  }
+  // Side Nav ends //
+
+  // Main starts //
+  main {
+    position: absolute;
+    left: 15%;
+    width: 85%;
+    .main-body {
+      // display: grid;
+      // grid-gap: 2rem;
+      padding: 1.5rem;
+    }
+
+    @media only screen and (max-width: 755px) {
+      left: 0;
+      width: 100%;
+      transition: all 0.5s;
+      &.show-menu {
+        left: 30%;
+      }
+      .main-header .main-header-menu {
+        visibility: visible;
+      }
+    }
+  }
+  // Main ends //
+}
+
+// Media Queries //
+
+// Media Queries //

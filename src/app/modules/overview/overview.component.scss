@@ -1,0 +1,138 @@
+@import '../../../assets/css/variables.scss';
+@import '../../../assets/css/mixin.scss';
+
+section:not(:last-child) {
+  margin-bottom: $m-3;
+}
+.title {
+  h2 {
+    color: $primary80;
+  }
+}
+.overview {
+  display: flex;
+  justify-content: space-between;
+  .stats {
+    flex-basis: 67%;
+    .details {
+      margin-bottom: $m-3;
+      .card_item {
+        @include sect-bg;
+        .icon {
+          padding: $m-2;
+          margin-right: $m-2;
+          background-color: $primary80;
+          border-radius: 50%;
+          justify-content: center;
+          img {
+            filter: brightness(10);
+          }
+        }
+        &_details {
+          .value {
+            margin-top: $m-1
+          }
+        }
+      }
+    }
+    .enroll {
+      @include sect-bg;
+    }
+  }
+  .messages {
+    flex-basis: 30%;
+    @include sect-bg;
+    &_head {
+      margin-bottom: $m-2;
+      p {
+        color: $primary40;
+        margin-top: $m-2;
+      }
+    }
+    &_list {
+      display: grid;
+      grid-gap: 1rem;
+      &_item {
+        align-items: flex-start;
+        img {
+          width: 40px;
+          height: 40px;
+          margin-right: $m-2;
+        }
+        &_details {
+          p {
+            margin-top: $m-1;
+          }
+        }
+      }
+    }
+  }
+}
+
+.ap-sch {
+  @include sect-bg;
+  &_body {
+    .table {
+      &_row {
+        padding: $m-2;
+        grid-template-columns: repeat(6, 1fr);
+        &:not(:last-child) {
+          border-bottom: 1px solid $inner-boder;
+        }
+        .item {
+          display: inline-block;
+          &:nth-child(1) {
+            grid-column: 1 / 2;
+          }
+          &:nth-child(2) {
+            grid-column: 2 / 4;
+          }
+          &:nth-child(3) {
+            grid-column: 4 / 5;
+          }
+          &:nth-child(4) {
+            grid-column: 5 / 6;
+          }
+        }
+        &.table_head {
+          background-color: $primary80;
+          color: $white-color;
+          border-radius: $border-radius1 $border-radius1 0px 0px;
+        }
+        &.table_body {
+          border-bottom: 1px solid $inner-boder;
+          border-left: 1px solid $inner-boder;
+          border-right: 1px solid $inner-boder;
+        }
+      }
+    }
+  }
+}
+
+.table {
+  width: 100%;
+}
+// @media only screen and (max-width: 977px) {
+//   .table {
+//     width: 200%;
+//   }
+//   .body {
+//     width: 100%;
+//     overflow-x: scroll;
+//   }
+// }
+.table .table_row {
+  display: grid;
+  grid-gap: 1rem;
+  align-items: flex-start;
+}
+
+.success {
+  color: $success-color;
+}
+.error {
+  color: $error-color;
+}
+.warning {
+  color: $warning-color;
+}

@@ -1,0 +1,80 @@
+<section class="title">
+  <h2>Dashboard</h2>
+</section>
+
+<section class="overview">
+  <div class="stats">
+    <div class="details card">
+      <div class="card_item dis-flex">
+        <span class="icon dis-flex">
+          <img src="../../../assets/img/svg/profile-2user.svg" alt="" />
+        </span>
+        <div class="card_item_details">
+          <h5>Students</h5>
+          <h2 class="value">0</h2>
+        </div>
+      </div>
+      <div class="card_item dis-flex">
+        <img src="../../../assets/img/svg/profile-2user.svg" alt="" />
+        <div class="details">
+          <h5>Students</h5>
+          <h2>0</h2>
+        </div>
+      </div>
+      <div class="card_item dis-flex">
+        <img src="../../../assets/img/svg/profile-2user.svg" alt="" />
+        <div class="details">
+          <h5>Students</h5>
+          <h2>0</h2>
+        </div>
+      </div>
+    </div>
+    <div class="enroll">
+      <h5>Enrollment</h5>
+      <div class="">
+        <img src="../../../assets/img/svg/chart.svg" alt="" />
+      </div>
+    </div>
+  </div>
+  <aside class="messages">
+    <div class="messages_head">
+      <h5>Messages</h5>
+      <p>Recent</p>
+    </div>
+    <ul class="messages_list">
+      <li class="messages_list_item dis-flex">
+        <img src="../../../assets/img/person1.png" alt="" />
+        <div class="messages_list_item_details">
+          <h4>Charlie Renner</h4>
+          <p>
+            Dolor ullam in non molestias. At aut reiciendis dolor non culpa sint
+            quasi.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </aside>
+</section>
+
+<!-- Approved schools(ap-sch) -->
+<section class="ap-sch">
+  <h5>Approve Schools</h5>
+  <div class="ap-sch_body">
+    <div class="table">
+      <div class="table_head table_row">
+        <span class="item">Name</span>
+        <span class="item">Head of School</span>
+        <span class="item">Phone Number</span>
+        <span class="item">School Email Adress</span>
+        <span class="item">Status</span>
+      </div>
+      <div class="table_body table_row" *ngFor="let i of approvedSchools">
+        <span class="item">{{ i.name }}</span>
+        <span class="item">{{ i.headOfSchool }}</span>
+        <span class="item">{{ i.phoneNumber }}</span>
+        <span class="item">{{ i.schoolEmail }}</span>
+        <span class="item" id="status">{{ i.schoolStatus }}</span>
+      </div>
+    </div>
+  </div>
+</section>

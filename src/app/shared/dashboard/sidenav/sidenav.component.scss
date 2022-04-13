@@ -1,0 +1,57 @@
+@import '../../../../assets/css/variables.scss';
+
+.container {
+  margin: $m-3 10%;
+  .sidenav-logo {
+    display: inline-block;
+    img {
+      width: 100%;
+      height: auto;
+      margin-left: -10px;
+    }
+  }
+  nav {
+    margin-top: 3rem;
+    ul {
+      display: grid;
+      grid-gap: 2rem;
+      li {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19.5px;
+        position: relative;
+        transition: all 0.4s ease-in;
+        display: flex;
+        align-items: center;
+        img {
+          margin-right: 0.5rem;
+        }
+        &::after {
+          transition: all 0.4s ease-in;
+        }
+        &:not(:last-child):hover:after,
+        &.active:after {
+          content: "";
+          width: 3px;
+          height: 100%;
+          position: absolute;
+          right: -12%;
+          background-color: $primary80;
+        }
+        &:not(:last-child):hover,
+        &.active {
+          color: $primary80;
+        }
+        &.logout {
+          color: $error-color;
+          img {
+            transition: all 0.2s ease-in;
+          }
+          &:hover img {
+            transform: translateX(-5px);
+          }
+        }
+      }
+    }
+}
+}

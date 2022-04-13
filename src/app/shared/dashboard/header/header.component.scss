@@ -1,0 +1,70 @@
+@import '../../../../assets/css/variables.scss';
+
+header {
+  background-color: $white-color;
+  border: 1px solid $inner-boder;
+  padding: $m-3;
+  justify-content: space-between;
+  .search_area {
+    .input_field {
+      padding: 0 $m-2;
+      background: #F7F7F7;
+      border-radius: $border-radius3;
+      border: 2px solid $white-color;
+      margin-right: $m-1;
+      @media only screen and (min-width: 755px) {
+        min-width: 400px;
+      }
+      img {
+        margin-right: $m-1;
+      }
+      input {
+        width: 100%;
+        padding: $m-2 0;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        font-size: 16px;
+        font-weight: 500;
+        color: rgba(45, 43, 109, 0.6);
+        &::placeholder {
+          color: rgba(45, 43, 109, 0.6);
+        }
+      }
+    }
+  }
+  .right {
+    .notifi {
+      margin-right: $m-2;
+      width: 44px;
+      height: 44px;
+      background-color: $white-color;
+      border: 1px solid $inner-boder;
+      border-radius: 50%;
+      justify-content: center;
+      img {
+        transition: all 0.2s ease-in;
+      }
+      &:hover img {
+        transform: scale(1.2);
+      }
+    }
+    .profile {
+      &_img {
+        width: 44px;
+        height: 44px;
+      }
+      &_details {
+        margin: 0 $m-2;
+        color: $primary80;
+        p {
+          float: right;
+        }
+      }
+    }
+    .icon {
+      font-size: 26px;
+      color: $primary80;
+    }
+  }
+}

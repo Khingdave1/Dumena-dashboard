@@ -1,0 +1,45 @@
+<!-- Side Nav -->
+<div class="container">
+  <!-- Logo -->
+  <span routerLink="/" class="sidenav-logo clickable">
+    <img src="../../../../assets/img/logo.png" alt="image" />
+  </span>
+  <nav>
+    <ul class="sidenav-list">
+      <li
+        class="clickable"
+        routerLinkActive="active"
+        routerLink="/"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <img src="../../../../assets/img/svg/Layout.svg" alt="image" />Dashboard
+      </li>
+      <li class="clickable" routerLinkActive="" routerLink="/">
+        <img
+          src="../../../../assets/img/svg/University.svg"
+          alt="image"
+        />Courses
+      </li>
+      <li class="clickable" routerLinkActive="" routerLink="/">
+        <img src="../../../../assets/img/svg/Book-open.svg" alt="image" />
+        Assessment
+      </li>
+      <li class="clickable" routerLinkActive="" routerLink="/">
+        <img src="../../../../assets/img/svg/Envelope.svg" alt="image" />
+        Messages
+      </li>
+      <li class="clickable" routerLinkActive="" routerLink="/">
+        <img src="../../../../assets/img/svg/profile-2user.svg" alt="image" />
+        Community
+      </li>
+      <li class="clickable" routerLinkActive="" routerLink="/">
+        <img src="../../../../assets/img/svg/frame.svg" alt="image" />
+        Account
+      </li>
+      <li class="logout clickable" routerLinkActive="" routerLink="/">
+        <img src="../../../../assets/img/svg/Logout.svg" alt="image" />
+        Log Out
+      </li>
+    </ul>
+  </nav>
+</div>

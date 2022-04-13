@@ -1,0 +1,7 @@
+@import './variables.scss';
+
+@mixin sect-bg {
+  background-color: $white-color;
+  border-radius: $border-radius2;
+  padding: $m-2;
+}
