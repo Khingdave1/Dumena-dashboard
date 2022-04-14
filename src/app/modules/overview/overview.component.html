@@ -4,7 +4,7 @@
 
 <section class="overview">
   <div class="stats">
-    <div class="details card">
+    <div class="card">
       <div class="card_item dis-flex">
         <span class="icon dis-flex">
           <img src="../../../assets/img/svg/profile-2user.svg" alt="" />
@@ -15,29 +15,62 @@
         </div>
       </div>
       <div class="card_item dis-flex">
-        <img src="../../../assets/img/svg/profile-2user.svg" alt="" />
-        <div class="details">
-          <h5>Students</h5>
-          <h2>0</h2>
+        <span class="icon dis-flex">
+          <img src="../../../assets/img/svg/video-square.svg" alt="" />
+        </span>
+        <div class="card_item_details">
+          <h5>Videos</h5>
+          <h2 class="value">0</h2>
         </div>
       </div>
       <div class="card_item dis-flex">
-        <img src="../../../assets/img/svg/profile-2user.svg" alt="" />
-        <div class="details">
-          <h5>Students</h5>
-          <h2>0</h2>
+        <span class="icon dis-flex">
+          <img src="../../../assets/img/svg/box.svg" alt="" />
+        </span>
+        <div class="card_item_details">
+          <h5>Live Courses</h5>
+          <h2 class="value">0</h2>
+        </div>
+      </div>
+      <div class="card_item dis-flex">
+        <span class="icon dis-flex">
+          <img src="../../../assets/img/svg/people.svg" alt="" />
+        </span>
+        <div class="card_item_details">
+          <h5>Parents</h5>
+          <h2 class="value">0</h2>
+        </div>
+      </div>
+      <div class="card_item dis-flex">
+        <span class="icon dis-flex">
+          <img src="../../../assets/img/svg/building.svg" alt="" />
+        </span>
+        <div class="card_item_details">
+          <h5>Schools</h5>
+          <h2 class="value">0</h2>
+        </div>
+      </div>
+      <div class="card_item dis-flex">
+        <span class="icon dis-flex">
+          <img src="../../../assets/img/svg/Bag.svg" alt="" />
+        </span>
+        <div class="card_item_details">
+          <h5>Educators</h5>
+          <h2 class="value">0</h2>
         </div>
       </div>
     </div>
     <div class="enroll">
-      <h5>Enrollment</h5>
+      <div class="enroll_title">
+        <h5>Enrollment</h5>
+      </div>
       <div class="">
         <img src="../../../assets/img/svg/chart.svg" alt="" />
       </div>
     </div>
   </div>
   <aside class="messages">
-    <div class="messages_head">
+    <div class="messages_title">
       <h5>Messages</h5>
       <p>Recent</p>
     </div>
@@ -45,11 +78,45 @@
       <li class="messages_list_item dis-flex">
         <img src="../../../assets/img/person1.png" alt="" />
         <div class="messages_list_item_details">
-          <h4>Charlie Renner</h4>
-          <p>
+          <h6 class="name">Charlie Renner</h6>
+          <small class="message">
             Dolor ullam in non molestias. At aut reiciendis dolor non culpa sint
             quasi.
-          </p>
+          </small>
+        </div>
+      </li>
+      <li class="messages_list_item dis-flex">
+        <img src="../../../assets/img/person2.png" alt="" />
+        <div class="messages_list_item_details">
+          <h6 class="name">Erika Prohaska</h6>
+          <small class="message"
+            >Sint quaerat eum esse sint numquam ea incidunt.</small
+          >
+        </div>
+      </li>
+      <li class="messages_list_item dis-flex">
+        <img src="../../../assets/img/person3.png" alt="" />
+        <div class="messages_list_item_details">
+          <h6 class="name">Sophia Hudson</h6>
+          <small class="message"
+            >Laudantium consequatur eum voluptas iusto enim.</small
+          >
+        </div>
+      </li>
+      <li class="messages_list_item dis-flex">
+        <img src="../../../assets/img/person4.png" alt="" />
+        <div class="messages_list_item_details">
+          <h6 class="name">Luis Leannon</h6>
+          <small class="message">How do I start a new coding course....</small>
+        </div>
+      </li>
+      <li class="messages_list_item dis-flex">
+        <img src="../../../assets/img/person3.png" alt="" />
+        <div class="messages_list_item_details">
+          <h6 class="name">Sophia Hudson</h6>
+          <small class="message"
+            >Laudantium consequatur eum voluptas iusto enim.</small
+          >
         </div>
       </li>
     </ul>
@@ -58,23 +125,32 @@
 
 <!-- Approved schools(ap-sch) -->
 <section class="ap-sch">
-  <h5>Approve Schools</h5>
+  <div class="ap-sch_title">
+    <h5>Approve Schools</h5>
+  </div>
   <div class="ap-sch_body">
-    <div class="table">
-      <div class="table_head table_row">
-        <span class="item">Name</span>
-        <span class="item">Head of School</span>
-        <span class="item">Phone Number</span>
-        <span class="item">School Email Adress</span>
-        <span class="item">Status</span>
-      </div>
-      <div class="table_body table_row" *ngFor="let i of approvedSchools">
-        <span class="item">{{ i.name }}</span>
-        <span class="item">{{ i.headOfSchool }}</span>
-        <span class="item">{{ i.phoneNumber }}</span>
-        <span class="item">{{ i.schoolEmail }}</span>
-        <span class="item" id="status">{{ i.schoolStatus }}</span>
-      </div>
+    <div style="overflow-x: auto">
+      <table>
+        <tr class="table-header">
+          <th>Name</th>
+          <th>Head of School</th>
+          <th>Phone Number</th>
+          <th>School Email Adress</th>
+          <th>Status</th>
+        </tr>
+        <tr class="table-body" *ngFor="let i of approvedSchools">
+          <td>{{ i.name | titlecase }}</td>
+          <td>{{ i.headOfSchool | titlecase }}</td>
+          <td>{{ i.phoneNumber }}</td>
+          <td>{{ i.schoolEmail }}</td>
+          <td class="status">
+            <span class="success dis-flex">
+              {{ i.schoolStatus | titlecase }}
+              <i class="bx bx-chevron-down icon"></i>
+            </span>
+          </td>
+        </tr>
+      </table>
     </div>
   </div>
 </section>

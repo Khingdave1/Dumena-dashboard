@@ -42,6 +42,10 @@ header {
       border: 1px solid $inner-boder;
       border-radius: 50%;
       justify-content: center;
+      transition: all 0.2s ease-in;
+      &:hover {
+        border: 1px solid $warning-color;
+      }
       img {
         transition: all 0.2s ease-in;
       }
@@ -59,6 +63,7 @@ header {
         color: $primary80;
         p {
           float: right;
+          color: $primary40;
         }
       }
     }

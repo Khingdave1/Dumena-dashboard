@@ -29,8 +29,8 @@
         &::after {
           transition: all 0.4s ease-in;
         }
-        &:not(:last-child):hover:after,
-        &.active:after {
+        &:not(:last-child):hover::after,
+        &.active::after {
           content: "";
           width: 3px;
           height: 100%;

@@ -96,17 +96,17 @@ h2 {
   line-height: 28.8px;
 }
 h3 {
-  font-size: 14px;
+  font-size: 24px;
   font-weight: 400;
   line-height: 16.8px;
 }
 h4 {
-  font-size: 16px;
+  font-size: 22px;
   font-weight: 500;
   line-height: 19.2px;
 }
 h5 {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 19.2px;
 }
@@ -117,27 +117,16 @@ h6 {
 
 }
 p {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 21.6px;
 }
+small {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21.6px;
+
+}
 /* Headings ends */
 
-//-- Card ends --//
-.card {
-  display: grid;
-  grid-gap: 2rem;
-  @media only screen and (min-width: 450px) {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  }
-  // &_item {
-  //   text-align: center;
-  //   img {
-  //     margin-bottom: $m-3;
-  //   }
-  //   p {
-  //     margin-top: $m-2;
-  //   }
-  // }
-}
-//-- Card ends --//
+

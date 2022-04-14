@@ -1,7 +1,7 @@
 @import '../../../assets/css/variables.scss';
 
 .container-dash {
-  @media only screen and (max-width: 755px) {
+  @media only screen and (max-width: 905px) {
     display: flex;
     width: 100%;
   }
@@ -17,7 +17,7 @@
       border: 1px solid $inner-boder;
       position: relative;
     }
-    @media only screen and (max-width: 755px) {
+    @media only screen and (max-width: 905px) {
       position: fixed;
       top: 0px;
       left: -100%;
@@ -46,7 +46,7 @@
       padding: 1.5rem;
     }
 
-    @media only screen and (max-width: 755px) {
+    @media only screen and (max-width: 905px) {
       left: 0;
       width: 100%;
       transition: all 0.5s;

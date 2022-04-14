@@ -12,11 +12,21 @@ section:not(:last-child) {
 .overview {
   display: flex;
   justify-content: space-between;
+  @media only screen and (max-width: 850px) {
+    display: grid;
+    grid-gap: $m-3;
+  }
   .stats {
     flex-basis: 67%;
-    .details {
+    //-- Card ends --//
+    .card {
+      display: grid;
+      grid-gap: 2rem;
       margin-bottom: $m-3;
-      .card_item {
+      @media only screen and (min-width: 450px) {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+      &_item {
         @include sect-bg;
         .icon {
           padding: $m-2;
@@ -35,18 +45,26 @@ section:not(:last-child) {
         }
       }
     }
+    //-- Card ends --//
     .enroll {
       @include sect-bg;
+      &_title {
+        @include sect-bg-title;
+      }
+      img {
+        width: 100%;
+        height: auto;
+      }
     }
   }
   .messages {
     flex-basis: 30%;
     @include sect-bg;
-    &_head {
+    &_title {
       margin-bottom: $m-2;
+      @include sect-bg-title;
       p {
         color: $primary40;
-        margin-top: $m-2;
       }
     }
     &_list {
@@ -60,8 +78,12 @@ section:not(:last-child) {
           margin-right: $m-2;
         }
         &_details {
-          p {
-            margin-top: $m-1;
+          .name {
+            color: $primary100;
+          }
+          .message {
+            display: inline-block;
+            margin-top: 0.3rem;
           }
         }
       }
@@ -71,68 +93,78 @@ section:not(:last-child) {
 
 .ap-sch {
   @include sect-bg;
+  &_title {
+    @include sect-bg-title;
+  }
+  font-size: 14px;
   &_body {
-    .table {
-      &_row {
+    table {
+      border-spacing: 0;
+      width: 100%;
+      border: 1px solid $inner-boder;
+      border-radius: $border-radius1 $border-radius1 0px 0px;
+      td, th {
         padding: $m-2;
-        grid-template-columns: repeat(6, 1fr);
-        &:not(:last-child) {
-          border-bottom: 1px solid $inner-boder;
-        }
-        .item {
-          display: inline-block;
-          &:nth-child(1) {
-            grid-column: 1 / 2;
-          }
-          &:nth-child(2) {
-            grid-column: 2 / 4;
-          }
-          &:nth-child(3) {
-            grid-column: 4 / 5;
-          }
-          &:nth-child(4) {
-            grid-column: 5 / 6;
-          }
-        }
-        &.table_head {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: 0.01em;
+        text-align: left;
+      }
+      tr {
+        &.table-header {
           background-color: $primary80;
           color: $white-color;
           border-radius: $border-radius1 $border-radius1 0px 0px;
+          th:last-child {
+            border-radius: 0 $border-radius1 0px 0px;
+          }
+          th:first-child {
+            border-radius: $border-radius1 0 0px 0px;
+          }
         }
-        &.table_body {
-          border-bottom: 1px solid $inner-boder;
-          border-left: 1px solid $inner-boder;
-          border-right: 1px solid $inner-boder;
+        &.table-body {
+          td {
+            border-bottom: 1px solid $inner-boder;
+            &.status {
+              span {
+                padding: $m-1;
+                border-radius: 4px;
+                &.success {
+                  border: 0.5px solid $success-color;
+                  color: $success-color;
+                  .icon {
+                    color: $success-color;
+                  }
+                }
+                &.error {
+                  color: $error-color;
+                  border: 0.5px solid $error-color;
+                  .icon {
+                    color: $error-color;
+                  }
+                }
+                &.warning {
+                  color: $warning-color;
+                  border: 0.5px solid $warning-color;
+                  .icon {
+                    color: $warning-color;
+                  }
+                }
+              }
+            }
+          }
+          &:not(:last-child) {
+            td {
+              border-bottom: 1px solid $inner-boder;
+            }
+          }
         }
       }
+
     }
   }
 }
 
-.table {
-  width: 100%;
-}
-// @media only screen and (max-width: 977px) {
-//   .table {
-//     width: 200%;
-//   }
-//   .body {
-//     width: 100%;
-//     overflow-x: scroll;
-//   }
-// }
-.table .table_row {
-  display: grid;
-  grid-gap: 1rem;
-  align-items: flex-start;
-}
 
-.success {
-  color: $success-color;
-}
-.error {
-  color: $error-color;
-}
-.warning {
-  color: $warning-color;
-}
+

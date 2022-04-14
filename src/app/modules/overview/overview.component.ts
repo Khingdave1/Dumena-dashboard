@@ -18,26 +18,34 @@ export class OverviewComponent implements OnInit {
     },
     {
       id: 2,
-      name: 'Deo Gratias ',
+      name: 'Deo Gratias',
       headOfSchool: 'Savannah Nguyen',
       phoneNumber: '(704) 555-0127',
       schoolEmail: 'nathan.roberts@example.com',
-      schoolStatus: 'decline'
+      schoolStatus: 'approved'
+    },
+    {
+      id: 3,
+      name: 'Funtag College',
+      headOfSchool: 'Leslie Alexander',
+      phoneNumber: '(629) 555-0129',
+      schoolEmail: 'deanna.curtis@example.com',
+      schoolStatus: 'approved'
     }
   ]
 
   constructor() { }
 
   ngOnInit(): void {
-    this.approvedSchools.forEach((r: any) => {
-      console.log(r.name)
-      if (r.schoolStatus == 'approved') {
-        document.getElementById('status')?.classList.add('success')
-        console.log(r)
-      } else {
-        document.getElementById('status')?.classList.add('error')
-      }
-    })
+    // this.approvedSchools.forEach((r: any) => {
+    //   console.log(r.name)
+    //   if (r.schoolStatus == 'approved') {
+    //     document.getElementById('status')?.classList.add('success')
+    //     console.log(r)
+    //   } else {
+    //     document.getElementById('status')?.classList.add('error')
+    //   }
+    // })
   }
 
 
