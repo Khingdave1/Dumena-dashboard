@@ -11,6 +11,7 @@ https://www.figma.com/file/hsMljGZ5zWLYizdzpaF6i6/DUMENA-Dashboard?node-id=2%3A1
 
 # Font
 Family: Lato
+
 Weight: 300, 400, 500, 600, 700
 
 # Images
