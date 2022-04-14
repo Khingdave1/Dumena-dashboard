@@ -22,7 +22,7 @@ export class OverviewComponent implements OnInit {
       headOfSchool: 'Savannah Nguyen',
       phoneNumber: '(704) 555-0127',
       schoolEmail: 'nathan.roberts@example.com',
-      schoolStatus: 'approved'
+      schoolStatus: 'decline'
     },
     {
       id: 3,
@@ -30,24 +30,29 @@ export class OverviewComponent implements OnInit {
       headOfSchool: 'Leslie Alexander',
       phoneNumber: '(629) 555-0129',
       schoolEmail: 'deanna.curtis@example.com',
-      schoolStatus: 'decline'
+      schoolStatus: 'in review'
+    },
+    {
+      id: 4,
+      name: 'Premier College',
+      headOfSchool: 'Esther Howard',
+      phoneNumber: '(406) 555-0120',
+      schoolEmail: 'michael.mitc@example.com',
+      schoolStatus: 'approved'
+    },
+    {
+      id: 5,
+      name: 'Nigerian Turkish Int,',
+      headOfSchool: 'Mr Ignatius Sola',
+      phoneNumber: '+234805664567',
+      schoolEmail: 'debbie.baker@example.com',
+      schoolStatus: 'approved'
     }
   ]
 
   constructor() { }
 
   ngOnInit(): void {
-    // this.approvedSchools.forEach((r: any) => {
-    //   console.log(r.name)
-    //   if (r.schoolStatus == 'approved') {
-    //     document.getElementById('status')?.classList.add('success')
-    //     console.log(r)
-    //   } else {
-    //     document.getElementById('status')?.classList.add('error')
-    //   }
-    // })
   }
-
-
 
 }

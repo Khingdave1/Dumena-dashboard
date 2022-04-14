@@ -144,10 +144,34 @@
           <td>{{ i.phoneNumber }}</td>
           <td>{{ i.schoolEmail }}</td>
           <td class="status">
-            <span class="success dis-flex">
+            <!-- <span
+              class="dis-flex"
+              [class.success]="i.schoolStatus == 'approved'"
+              [class.warning]="i.schoolStatus == 'in review'"
+              [class.error]="i.schoolStatus == 'decline'"
+            >
               {{ i.schoolStatus | titlecase }}
               <i class="bx bx-chevron-down icon"></i>
-            </span>
+            </span> -->
+            <select
+              name="status"
+              id="status"
+              class="dis-flex"
+              [class.success]="i.schoolStatus == 'approved'"
+              [class.warning]="i.schoolStatus == 'in review'"
+              [class.error]="i.schoolStatus == 'decline'"
+              [value]="i.schoolStatus"
+            >
+              <option value="approved" (click)="i.schoolStatus = 'Approved'">
+                Approved
+              </option>
+              <option value="in review" (click)="i.schoolStatus = 'in review'">
+                In Review
+              </option>
+              <option value="decline" (click)="i.schoolStatus = 'decline'">
+                Decline
+              </option>
+            </select>
           </td>
         </tr>
       </table>

@@ -127,11 +127,14 @@ section:not(:last-child) {
           td {
             border-bottom: 1px solid $inner-boder;
             &.status {
-              span {
+              select {
                 // width: 70%;
                 justify-content: space-between;
                 padding: $m-1;
                 border-radius: 4px;
+                // -webkit-appearance: none;
+                // appearance: none;
+                outline: none;
                 &.success {
                   border: 0.5px solid $success-color;
                   color: $success-color;
@@ -153,6 +156,10 @@ section:not(:last-child) {
                     color: $warning-color;
                   }
                 }
+                option {
+                  color: $primary80;
+                  padding: $m-2;
+                }
               }
             }
           }
@@ -168,5 +175,6 @@ section:not(:last-child) {
   }
 }
 
-
-
+select option {
+  padding: 10px;
+}
