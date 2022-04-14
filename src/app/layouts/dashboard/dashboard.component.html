@@ -1,18 +1,14 @@
 <div class="container-dash">
   <!-- Side Nav -->
-  <aside class="sidenav-area">
-    <!-- [class.show-menu]="hamClick" -->
-    <div class="sidenav">
-      <!-- #sideNav -->
+  <aside class="sidenav-area" [class.show-menu]="hamClick">
+    <div class="sidenav" #sideNav>
       <app-sidenav></app-sidenav>
     </div>
   </aside>
 
   <!-- Main -->
-  <main>
-    <!-- [class.show-menu]="hamClick" -->
-    <app-header></app-header>
-    <!-- (hamClick)="openMenu()" -->
+  <main [class.show-menu]="hamClick">
+    <app-header (hamClick)="openMenu()"></app-header>
     <div class="main-body">
       <!-- <app-overview></app-overview> -->
       <router-outlet></router-outlet>

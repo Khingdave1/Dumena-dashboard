@@ -30,7 +30,7 @@ export class OverviewComponent implements OnInit {
       headOfSchool: 'Leslie Alexander',
       phoneNumber: '(629) 555-0129',
       schoolEmail: 'deanna.curtis@example.com',
-      schoolStatus: 'approved'
+      schoolStatus: 'decline'
     }
   ]
 

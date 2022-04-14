@@ -128,6 +128,8 @@ section:not(:last-child) {
             border-bottom: 1px solid $inner-boder;
             &.status {
               span {
+                // width: 70%;
+                justify-content: space-between;
                 padding: $m-1;
                 border-radius: 4px;
                 &.success {

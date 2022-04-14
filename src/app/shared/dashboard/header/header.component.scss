@@ -6,12 +6,23 @@ header {
   padding: $m-3;
   justify-content: space-between;
   .search_area {
+    .hamburger {
+      display: none;
+      font-size: 40px;
+      color: $primary80;
+      @media only screen and (max-width: 905px) {
+        display: block;
+      }
+    }
     .input_field {
       padding: 0 $m-2;
       background: #F7F7F7;
       border-radius: $border-radius3;
       border: 2px solid $white-color;
       margin-right: $m-1;
+      // @media only screen and (max-width: 905px) {
+      //   display: none;
+      // }
       @media only screen and (min-width: 755px) {
         min-width: 400px;
       }
@@ -61,15 +72,21 @@ header {
       &_details {
         margin: 0 $m-2;
         color: $primary80;
+        @media only screen and (max-width: 665px) {
+          display: none;
+        }
         p {
           float: right;
           color: $primary40;
         }
       }
-    }
-    .icon {
-      font-size: 26px;
-      color: $primary80;
+      &_icon {
+        font-size: 26px;
+        color: $primary80;
+        @media only screen and (max-width: 665px) {
+          display: none;
+        }
+      }
     }
   }
 }
