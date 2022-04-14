@@ -22,7 +22,6 @@
       top: 0px;
       left: -100%;
       width: 30%;
-      // background-color: #ebebeb79;
       transition: all 0.5s;
       z-index: 100;
       &.show-menu {
@@ -52,7 +51,7 @@
       width: 100%;
       transition: all 0.5s;
       &.show-menu {
-        left: 30%;
+        left: 40%;
       }
       .main-header .main-header-menu {
         visibility: visible;
